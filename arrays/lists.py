@@ -7,7 +7,7 @@
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-newList = None
+newList = [ 1 , 2 ] 
 
 ########################################################################
 
@@ -31,7 +31,8 @@ appendElement = "ok?"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-listCopy = None
+listCopy = list1[:]
+listCopy.append(appendElement)
 
 ########################################################################
 
@@ -51,11 +52,13 @@ cycleMe = list(range(1, random.randint(5, 15)))
 #  ^Note how easy it is to create an list of random length in Py over JS
 #  cycleMeCopy is just a copy of the 'cycleMe' list used for checking answers,
 #  please ignore it
+
 cycleMeCopy = list(cycleMe)
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-
+cycleMe.append(cycleMe.pop(0))
+cycleMe.append(cycleMe.pop(0))
 
 ########################################################################
 
@@ -74,7 +77,7 @@ keepMe = clearJustMe
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-
+clearJustMe = []
 
 ########################################################################
 
@@ -93,7 +96,7 @@ loseMe = clearAll
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-
+clearAll.clear()
 
 ########################################################################
 
@@ -110,8 +113,8 @@ allScores = [ random.randint(0, 100), random.randint(0, 100), random.randint(0, 
 allScoresCopy = list(allScores)
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
-
-top3Scores = None
+allScores.sort(reverse=True)
+top3Scores = allScores[:3]
 
 ########################################################################
 
